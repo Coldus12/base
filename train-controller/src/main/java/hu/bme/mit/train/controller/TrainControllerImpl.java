@@ -10,7 +10,11 @@ public class TrainControllerImpl implements TrainController {
 
 	private boolean run = false;  
 
-	public TrainControllerImpl() {
+	public void setUpdatesRefSpeed(boolean bool){
+		run = bool;  
+	} 
+
+	public void startFollowingTheSpeedMate(){
 		try{
 			while (run) { 
 				Thread.sleep(1000);
@@ -19,7 +23,9 @@ public class TrainControllerImpl implements TrainController {
 		} catch(Exception ex){
 			ex.printStackTrace();
 		} 
-	}  
+	} 
+
+	public TrainControllerImpl() {}  
 
 	@Override
 	public void followSpeed() {
