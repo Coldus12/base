@@ -32,10 +32,14 @@ public class TrainControllerImpl implements TrainController {
     private int referenceSpeed = 0;
     private int speedLimit = 0;
     private PeriodicRefSpeedChanger speedChanger;
+    
+    public static final boolean IS_TESTING_MODE = true;
 
     public TrainControllerImpl() {
         speedChanger = new PeriodicRefSpeedChanger(this);
-        //speedChanger.run(); to not block, when unit test
+        if (!TrainControllerImpl.IS_TESTING_MODE) {
+         speedChanger.run();
+        }
     }
 
     @Override
