@@ -8,9 +8,9 @@ public class TrainControllerImpl implements TrainController {
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
 
-	private boolean run = true;  
+	private boolean run = false;  
 
-	public TrainController() {
+	public TrainControllerImpl() {
 		try{
 			while (run) { 
 				Thread.sleep(1000);
