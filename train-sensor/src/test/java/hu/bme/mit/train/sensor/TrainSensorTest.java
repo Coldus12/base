@@ -30,27 +30,30 @@ public class TrainSensorTest {
     @Test
     public void SpeedLimitIsNegativeTest() {
         this.sensor.overrideSpeedLimit(-10);
-        when(this.user.getAlarmState()).thenReturn(true);
-        //verify(this.user.getAlarmState(),)
+        assertTrue(this.user.getAlarmState());
+        verify(this.user).getAlarmState();
     }
 
     @Test
     public void SpeedLimitIsTooLargeTest() {
         this.sensor.overrideSpeedLimit(501);
-        when(this.user.getAlarmState()).thenReturn(true);
+        assertTrue(this.user.getAlarmState());
+        verify(this.user).getAlarmState();
     }
 
     @Test
     public void SpeedLimitRelativeMarginExceededTest() {
         this.ctrl.setReferenceSpeed(100);
         this.sensor.overrideSpeedLimit(40);
-        when(this.user.getAlarmState()).thenReturn(true);
+        assertTrue(this.user.getAlarmState());
+        verify(this.user).getAlarmState();
     }
 
     @Test
     public void SpeedLimitRelativeMarginNotExceededTest() {
         this.ctrl.setReferenceSpeed(100);
         this.sensor.overrideSpeedLimit(60);
-        when(this.user.getAlarmState()).thenReturn(false);
+        assertTrue(this.user.getAlarmState());
+        verify(this.user).getAlarmState();
     }
 }
