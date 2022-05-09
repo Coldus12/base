@@ -35,7 +35,7 @@ public class TrainControllerImpl implements TrainController {
 
     public TrainControllerImpl() {
         speedChanger = new PeriodicRefSpeedChanger(this);
-        speedChanger.run();
+        //speedChanger.run(); to not block, when unit test
     }
 
     @Override
