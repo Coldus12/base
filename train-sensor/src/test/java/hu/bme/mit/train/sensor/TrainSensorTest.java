@@ -17,7 +17,7 @@ public class TrainSensorTest {
 
     @Before
     public void before() {
-        this.ctrl = mock(TrainContoller.class);
+        this.ctrl = mock(TrainController.class);
         this.user = mock(TrainUser.class);
         this.sensor = new TrainSensorImpl(this.ctrl, this.user);
     }
