@@ -2,6 +2,9 @@ package hu.bme.mit.train.sensor;
 
 import org.junit.Assert;
 import org.junit.Before;
+import hu.bme.mit.train.controller.*;
+import hu.bme.mit.train.sensor.*;
+import hu.bme.mit.train.user.*;
 import org.junit.Test;
 import static org.mockito.Mockito.*;
 
