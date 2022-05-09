@@ -3,6 +3,9 @@ package hu.bme.mit.train.sensor;
 import org.junit.Assert;
 import org.junit.Before;
 import hu.bme.mit.train.interfaces.*;
+import hu.bme.mit.train.controller.*;
+import hu.bme.mit.train.sensor.*;
+import hu.bme.mit.train.user.*;
 import org.junit.Test;
 import static org.mockito.Mockito.*;
 
@@ -17,8 +20,8 @@ public class TrainSensorTest {
 
     @Before
     public void before() {
-        this.ctrl = mock(TrainController.class);
-        this.user = mock(TrainUser.class);
+        this.ctrl = mock(TrainControllerImpl.class);
+        this.user = mock(TrainUserImpl.class);
         this.sensor = new TrainSensorImpl(this.ctrl, this.user);
     }
 
