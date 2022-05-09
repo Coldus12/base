@@ -45,7 +45,7 @@ public class TrainSensorTest {
     public void SpeedLimitRelativeMarginExceededTest() {
         this.ctrl.setReferenceSpeed(100);
         this.sensor.overrideSpeedLimit(40);
-        assertTrue(this.user.getAlarmState());
+        assertTrue("asd",this.user.getAlarmState());
         verify(this.user).getAlarmState();
     }
 
