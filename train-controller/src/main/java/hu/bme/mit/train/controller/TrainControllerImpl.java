@@ -34,7 +34,7 @@ public class TrainControllerImpl implements TrainController {
     private PeriodicRefSpeedChanger speedChanger;
 
     public TrainControllerImpl() {
-        speedChanger = new PeriodicRefSpeedChanger();
+        speedChanger = new PeriodicRefSpeedChanger(this);
         speedChanger.run();
     }
 
