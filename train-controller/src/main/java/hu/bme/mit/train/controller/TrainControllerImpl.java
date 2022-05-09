@@ -63,7 +63,7 @@ public class TrainControllerImpl implements TrainController {
     }
 
     @Override
-    void setReferenceSpeed(int new_ref) {
+    public void setReferenceSpeed(int new_ref) {
         this.referenceSpeed = new_ref;
     }
 
